@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffdf5;
+    color: #333;
+}
+
+.nav-top {
+    background-color: #ffd700;
+    padding: 5px;
+    position: relative;
+}
+
+.nav-top ul {
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+}
+
+.nav-top ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+input[type="button"] {
+    background-color: red;
+    border-radius: 11px;
+    padding: 5px 10px;
+    margin: 7px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 30px;
+}
+ul li a {
+  color: black; 
+  text-decoration: none;
+}
+ul li a:hover {
+  color: rgb(0, 0, 0); 
+}
+
+.nav-left {
+    width: 250px;
+}
+
+.nav-left input[type="text"] {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.nav-center img {
+    height: 60px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-right img {
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.nav-right img:hover {
+    transform: scale(1.1);
+}
+
+.nav-third {
+    background-color: #e0ba10;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    
+}
+
+.nav-third ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-third ul li:hover {
+    text-decoration: underline;
+    color: #333;
+    text-decoration: none;
+}
+.nav-third a li{
+  text-decoration: none;
+  color: #333;
+}
+
+.slider-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 5px auto;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+
+.main-container img {
+    width: 100%;       
+    height: auto;      
+    display: block;    
+    margin: 0 auto;
+  }
+  .main-container{
+    width: 100%;
+    padding: 20px;
+    margin: 1px auto;
+  }
+
+  .card h3{
+    text-align: center;
+    font-weight: lighter;
+   }
+   .container {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 20px;
+       padding: 20px;
+     }
+     
+     .product-card {
+       position: relative;
+       overflow: hidden;
+       background-color: #fff;
+       border: 1px solid #ddd;
+       width: 220px;
+       min-height: 400px;
+       padding: 15px;
+       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+       text-align: center;
+       border-radius: 6px;
+       transition: transform 0.2s;
+     }
+     
+     .product-card:hover {
+       transform: scale(1.03);
+     }
+     
+     .product-card img {
+       width: 100%;
+       height: auto;
+       border-radius: 4px;
+     }
+     
+     .product-card h3 {
+       font-size: 16px;
+       margin: 10px 0;
+     }
+     
+     .price {
+       font-size: 16px;
+       font-weight: bold;
+       color: #000;
+     }
+     
+     .old-price {
+       text-decoration: line-through;
+       color: #999;
+       font-size: 14px;
+       margin-left: 5px;
+     }
+     
+     .discount {
+       color: red;
+       font-weight: bold;
+       margin: 5px 0;
+     }
+     
+     .add-to-cart {
+       background-color: red;
+       color: #fff;
+       border: none;
+       padding: 10px 0;
+       width: 100%;
+       font-weight: bold;
+       cursor: pointer;
+       border-radius: 4px;
+       display: none; /* hide by default */
+     }
+     
+     .product-card:hover .add-to-cart {
+       display: block; /* show on hover */
+     }
+   
+   
+     
+   .f{
+       background-color: rgb(255, 255, 0);
+       background-position: content-fit;
+       margin: 0px;
+       padding: 30px;
+       text-align: center;
+     }
+     .footer {
+       background-color: #ffffff;
+       text-decoration: none;
+       color: black;
+       padding: 20px 0;
+       text-align: center;
+       margin-top: 50px;
+       display: flex;
+     }
+     
+   .footer1 p, .footer2 p, .footer3 p, .footer4 p, .footer5 p{
+       margin-left: 50px;
+       padding-top: 10px;
+       text-decoration: none;
+   
+   }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dry Fruit Treats</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 90%;
+      max-width: 1200px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .card {
+      width: 300px;
+      height: 400px;
+      margin: 10px;
+      flex-shrink: 0;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .card img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Navigation Arrows */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    /* For sliding effects */
+    .slider-container:focus-within .slider-wrapper {
+      transition: transform 0.5s ease;
+    }
+
+    /* Transform for sliding */
+    #slide1:checked ~ .slider-container .slider-wrapper {
+      transform: translateX(0%);
+    }
+
+    #slide2:checked ~ .slider-container .slider-wrapper {
+      transform: translateX(-100%);
+    }
+
+    #slide3:checked ~ .slider-container .slider-wrapper {
+      transform: translateX(-200%);
+    }
+
+    /* Hide radio buttons */
+    input[type="radio"] {
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Radio buttons for controlling slider -->
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x300/?dryfruit" alt="">
+        <div class="card-content">
+          <h2>Dry Fruit Treats</h2>
+          <p>Rich and healthy treats for your energy boost.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/300x300/?nuts" alt="">
+        <div class="card-content">
+          <h2>Nutty Delights</h2>
+          <p>Enjoy a variety of nuts packed with health benefits.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/300x300/?dates" alt="">
+        <div class="card-content">
+          <h2>Sweet Dates</h2>
+          <p>Indulge in the natural sweetness of dates.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/300x300/?raisins" alt="">
+        <div class="card-content">
+          <h2>Golden Raisins</h2>
+          <p>Golden raisins are a perfect treat for every occasion.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <label for="slide1" class="arrow arrow-left">&#10094;</label>
+    <label for="slide2" class="arrow arrow-right">&#10095;</label>
+  </div>
+
+</body>
+</html>

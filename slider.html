@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Slider with Arrows</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      font-family: sans-serif;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 90%;
+      max-width: 1000px;
+      height: 500px;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      overflow: hidden;
+      color:  rgba(255, 255, 255, 0.6);
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    #slide1:checked ~ .slides .s1,
+    #slide2:checked ~ .slides .s2,
+    #slide3:checked ~ .slides .s3 {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .slides {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .navigation {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .navigation label {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: white;
+      border-radius: 50%;
+      display: inline-block;
+      border: 2px solid #000;
+      transition: 0.3s ease;
+    }
+
+    .navigation label:hover {
+      background-color: gray;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 5px 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 3;
+      user-select: none;
+    }
+
+    .arrow.left {
+      left: 15px;
+    }
+
+    .arrow.right {
+      right: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider-container">
+    <!-- Radio Buttons -->
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+
+    <!-- Slides -->
+    <div class="slides">
+      <div class="slide s1" style="background-image: url('1.webp');"></div>
+      <div class="slide s2" style="background-image: url('2.webp');"></div>
+      <div class="slide s3" style="background-image: url('3.webp');"></div>
+    </div>
+
+    <!-- Arrows -->
+    <label for="slide3" class="arrow left">&#10094;</label>  <!-- ‹ -->
+    <label for="slide2" class="arrow right">&#10095;</label> <!-- › -->
+
+    <div class="navigation">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+    </div>
+  </div>
+
+</body>
+</html>
